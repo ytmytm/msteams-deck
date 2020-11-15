@@ -49,12 +49,12 @@ If you are like me you are going to forget about those key assignments very soon
 
 I have used icons from <https://fontawesome.com/> and printed them out on a 1cm x 1cm grid, so every icon has maximum width or height of about 9mm.
 
-![fitting text labels][img/numpad-fit.jpg]
+![fitting text labels](img/numpad-fit.jpg)
 
 This is the arrangement next to the deck:
 
-![fitting text labels next to the deck][img/numpad-fit2.jpg]
+![fitting text labels next to the deck](img/numpad-fit2.jpg)
 
 I have used a spare USB numpad and glued icons to it using a clear acrylic paint.
 
-![final view][img/numpad-fitnal.jpg]
+![final view](img/numpad-fitnal.jpg)
