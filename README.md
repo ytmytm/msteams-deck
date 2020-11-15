@@ -1,6 +1,6 @@
 # MS Teams control deck
 
-This is a script I prepared for my 7 y.o. son to make it easier for him to participate in remote learning lessons.
+This is an Autohotkey script that I prepared for my 7 y.o. son to make it easier for him to participate in remote learning lessons.
 
 He needs to be able to quickly and easily:
 
@@ -16,8 +16,8 @@ He is able to do these actions using mouse but just not fast enough. Keyboard sh
 # Installation
 
 1. Download and install autohotkey from <https://www.autohotkey.com/>.
-2. Download **msteams-deck.ahk** file from this repository
-3. Double click on it to make the script active
+2. Download this repository as a ZIP archive and extract somewhere
+3. Double click on on the **msteams-deck.ahk** file to make the script active. A green Autohotkey icon will appear in the system tray.
 
 # How it works?
 
@@ -32,18 +32,18 @@ Whenever you press one of the shortcut keys the Teams window will be activated a
 
 These are the intercepted numerical pad keys:
 
-| key | fa-icon | function |
+| key | icon | function |
 |----:|:---:|-----|
 | **Enter** | [icon](https://fontawesome.com/icons/microphone?style=regular) | mute/unmute microphone |
 | **dot/Del** | [icon](https://fontawesome.com/icons/microphone?style=regular) | push-to-talk (or push-to-mute) whenever you want to temporarily toggle microphone status to say "Yes" or "I'm present" or (if it's your turn) to spare other participants from hearing your cough or sneeze|
 | **0/Ins** | [icon](https://fontawesome.com/icons/hand-paper?style=light) | raise/lower hand |
 | **1/End** | [icon](https://fontawesome.com/icons/user-friends?style=solid) | open/hide list of participants |
 | **2/down** | [icon](https://fontawesome.com/icons/comment-alt-lines?style=light) | open/hide chat window |
-| **3/PgDn** | [icon](https://fontawesome.com/icons/presentation?style=regular) | open/hide screen sharing options |
+| **3/PgDn** | [icon](https://fontawesome.com/icons/presentation?style=regular) | open/hide screen sharing options *(strangely Ctrl+Shift+E works only when chat window is open)* |
 | **/** | [icon](https://fontawesome.com/icons/video?style=solid) | camera on/off |
 | **+** | [icon](https://fontawesome.com/icons/volume-up?style=solid)| volume up |
 | **-** | [icon](https://fontawesome.com/icons/volume-down?style=solid) | volume down |
-| * | [icon](https://fontawesome.com/icons/volume-mute?style=solid) | mute on/off |
+| * | [icon](https://fontawesome.com/icons/volume-mute?style=solid) | sound mute on/off |
 
 # Keyboard labels
 
