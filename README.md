@@ -9,7 +9,9 @@ He needs to be able to quickly and easily:
 
 There is a really awkward keyboard shortcut for the microphone control (Ctrl+Shift+M) and there is no shortcut at all for raising hand.
 
-He is able to do these actions using mouse but just not fast enough.
+He is able to do these actions using mouse but just not fast enough. Keyboard shortcuts are always better than using a mouse, and a special deck is better then keyboard shortcuts.
+
+![final view](img/numpad-final-trim.jpg)
 
 # Installation
 
@@ -57,4 +59,4 @@ This is the arrangement next to the deck:
 
 I have used a spare USB numpad and glued icons to it using a clear acrylic paint.
 
-![final view](img/numpad-fitnal.jpg)
+![final view](img/numpad-final.jpg)
