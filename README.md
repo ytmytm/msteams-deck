@@ -32,18 +32,18 @@ Whenever you press one of the shortcut keys the Teams window will be activated a
 
 These are the intercepted numerical pad keys:
 
-| key | function |
-|----:|--------|
-| **Enter** | mute/unmute microphone |
-| **dot/Del** | push-to-talk (or push-to-mute) whenever you want to temporarily toggle microphone status to say "Yes" or "I'm present" or (if it's your turn) to spare other participants from hearing your cough or sneeze|
-| **0/Ins** | raise/lower hand |
-| **1/End** | open/hide list of participants |
-| **2/down** | open/hide chat window |
-| **3/PgDn** | open/hide screen sharing options |
-| **/** | camera on/off |
-| **+** | volume up |
-| **-** | volume down |
-| * | mute on/off |
+| key | fa-icon | function |
+|----:|:---:|-----|
+| **Enter** | [icon](https://fontawesome.com/icons/microphone?style=regular) | mute/unmute microphone |
+| **dot/Del** | [icon](https://fontawesome.com/icons/microphone?style=regular) | push-to-talk (or push-to-mute) whenever you want to temporarily toggle microphone status to say "Yes" or "I'm present" or (if it's your turn) to spare other participants from hearing your cough or sneeze|
+| **0/Ins** | [icon](https://fontawesome.com/icons/hand-paper?style=light) | raise/lower hand |
+| **1/End** | [icon](https://fontawesome.com/icons/user-friends?style=solid) | open/hide list of participants |
+| **2/down** | [icon](https://fontawesome.com/icons/comment-alt-lines?style=light) | open/hide chat window |
+| **3/PgDn** | [icon](https://fontawesome.com/icons/presentation?style=regular) | open/hide screen sharing options |
+| **/** | [icon](https://fontawesome.com/icons/video?style=solid) | camera on/off |
+| **+** | [icon](https://fontawesome.com/icons/volume-up?style=solid)| volume up |
+| **-** | [icon](https://fontawesome.com/icons/volume-down?style=solid) | volume down |
+| * | [icon](https://fontawesome.com/icons/volume-mute?style=solid) | mute on/off |
 
 # Keyboard labels
 
