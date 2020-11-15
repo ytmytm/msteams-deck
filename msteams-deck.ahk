@@ -8,20 +8,12 @@ chatIcon := LoadPicture("chat.png")
 handIcon := LoadPicture("hand.png")
 handRaisedIcon := LoadPicture("hand-raised.png")
 participantsIcon := LoadPicture("participants.png")
-screenShareIcon := LoadPicture("screen-share.png")
-screenUnShareIcon := LoadPicture("screen-unshare.png")
+chatIconHi := LoadPicture("chat-hires.png")
+handIconHi := LoadPicture("hand-hires.png")
+handRaisedIconHi := LoadPicture("hand-raised-hires.png")
+participantsIconHi := LoadPicture("participants-hires.png")
 
 CoordMode Pixel, Window  ; Interprets the coordinates below as relative to the screen rather than the active window.
-
-TeamsClick(offsetFromRightEdge, offsetFromTopEdge:=74) {
-		; click somewhere within Teams window
-		WinGetPos, X, Y, Width, Height, ahk_exe Teams.exe
-		XClickPos := Width-offsetFromRightEdge ; offset from the right edge
-		YClickPos := offsetFromTopEdge ; offset from the top edge
-		MouseGetPos, XPos, YPos ; preserve mouse position
-		MouseClick Left, %XClickPos%, %YClickPos% ; click on the raise hand icon
-		MouseMove %XPos%, %YPos%, 0 ; restore mouse pointer position
-}
 
 TeamsMouseClick(FoundX, FoundY) {
 		MouseGetPos, XPos, YPos ; preserve mouse position
@@ -62,6 +54,16 @@ TeamsActivate() {
 			TeamsMouseClick(FoundX, FoundY)
 			return
 		}
+		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%handIconHi%
+		if (ErrorLevel = 0) {
+			TeamsMouseClick(FoundX, FoundY)
+			return
+		}
+		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%handRaisedIconHi%
+		if (ErrorLevel = 0) {
+			TeamsMouseClick(FoundX, FoundY)
+			return
+		}
 	return
 
 	;	1/End -> participants
@@ -70,6 +72,11 @@ TeamsActivate() {
 		TeamsActivate()
 		WinGetPos, X, Y, Width, Height, ahk_exe Teams.exe
 		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%participantsIcon%
+		if (ErrorLevel = 0) {
+			TeamsMouseClick(FoundX, FoundY)
+			return
+		}
+		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%participantsIconHi%
 		if (ErrorLevel = 0) {
 			TeamsMouseClick(FoundX, FoundY)
 			return
@@ -86,24 +93,18 @@ TeamsActivate() {
 			TeamsMouseClick(FoundX, FoundY)
 			return
 		}
+		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%chatIconHi%
+		if (ErrorLevel = 0) {
+			TeamsMouseClick(FoundX, FoundY)
+			return
+		}
 	return
 
 	;	3/PgDown -> share screen
 	Numpad3::
 	NumpadPgDn::
 		TeamsActivate()
-		;Send ^+E ; CTRL+Shift+E should work, but it doesn't
-		WinGetPos, X, Y, Width, Height, ahk_exe Teams.exe
-		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%screenShareIcon%
-		if (ErrorLevel = 0) {
-			TeamsMouseClick(FoundX, FoundY)
-			return
-		}
-		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%screenUnShareIcon%
-		if (ErrorLevel = 0) {
-			TeamsMouseClick(FoundX, FoundY)
-			return
-		}
+		Send ^+E
 	return
 
 	;	./Del -> push to talk (toggle mute button on key press and key release, assuming that mic is muted by default)
