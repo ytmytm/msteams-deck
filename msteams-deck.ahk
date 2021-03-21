@@ -5,19 +5,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; preload images for matching
 chatIcon := LoadPicture("chat.png")
-handIcon := LoadPicture("hand.png")
-handRaisedIcon := LoadPicture("hand-raised.png")
 participantsIcon := LoadPicture("participants.png")
 chatIconHi := LoadPicture("chat-hires.png")
-handIconHi := LoadPicture("hand-hires.png")
-handRaisedIconHi := LoadPicture("hand-raised-hires.png")
 participantsIconHi := LoadPicture("participants-hires.png")
 
 CoordMode Pixel, Window  ; Interprets the coordinates below as relative to the screen rather than the active window.
 
 TeamsMouseClick(FoundX, FoundY) {
 		MouseGetPos, XPos, YPos ; preserve mouse position
-		MouseClick Left, %FoundX%, %FoundY% ; click on the raise hand icon
+		MouseClick Left, %FoundX%, %FoundY% ; click on the found icon
 		MouseMove %XPos%, %YPos%, 0 ; restore mouse pointer position
 }
 
@@ -30,7 +26,7 @@ TeamsActivate() {
 		}
 }
 
-; statements for Teams.exe active only when Teams is running
+; statements for Teams.exe can be active only when Teams is running
 #IfWinExist ahk_exe Teams.exe
 
 	;	ENTER -> mute/unmute (toggle)
@@ -39,31 +35,11 @@ TeamsActivate() {
 		Send ^+M
 	return
 
-	;	0/Insert -> raise hand (no matter if NumLock on or off
+	;	0/Insert -> raise hand (no matter if NumLock on or off)
 	NumpadIns::
 	Numpad0::
 		TeamsActivate()
-		WinGetPos, X, Y, Width, Height, ahk_exe Teams.exe
-		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%handIcon%
-		if (ErrorLevel = 0) {
-			TeamsMouseClick(FoundX, FoundY)
-			return
-		}
-		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%handRaisedIcon%
-		if (ErrorLevel = 0) {
-			TeamsMouseClick(FoundX, FoundY)
-			return
-		}
-		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%handIconHi%
-		if (ErrorLevel = 0) {
-			TeamsMouseClick(FoundX, FoundY)
-			return
-		}
-		ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, *64 HBITMAP:*%handRaisedIconHi%
-		if (ErrorLevel = 0) {
-			TeamsMouseClick(FoundX, FoundY)
-			return
-		}
+		Send ^+K
 	return
 
 	;	1/End -> participants
