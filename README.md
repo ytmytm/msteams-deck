@@ -4,10 +4,10 @@ This is an Autohotkey script that I prepared for my 7 y.o. son to make it easier
 
 He needs to be able to quickly and easily:
 
-- mute/unmute microphone (muted microphones are a must with any online meeting for more than 7 people)
-- raise/lower hand whenever he wants to ask for something or singal that he wants to answer teacher's question
+- mute/unmute microphone (muted microphones are necessary for any online meeting with more than 7 people)
+- raise/lower hand whenever he wants to ask for something or signal that he wants to answer teacher's question
 
-There is a really awkward keyboard shortcut for the microphone control (Ctrl+Shift+M) and there is no shortcut at all for raising hand.
+There is a really awkward keyboard shortcut for the microphone control (Ctrl+Shift+M) ~~and there is no shortcut at all~~ and another one, equally difficult for small hands (Ctrl+Shift_K) for raising hand.
 
 He is able to do these actions using mouse but just not fast enough. Keyboard shortcuts are always better than using a mouse, and a special deck is better then keyboard shortcuts.
 
